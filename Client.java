@@ -23,7 +23,7 @@ public class Client
     {
         boolean connection;
         connection= serveur.connecter(this);
-        if(connection== false) //On ne peut pas se connecter
+        if(connection== false)
             return false;
         else {
             this.serveur = serveur;
@@ -34,7 +34,7 @@ public class Client
     public void envoyer(String outMessage)
     {
         if(serveur != null)
-            serveur.diffuser(nomClient + "- -" + outMessage);
+            serveur.diffuser("("+ nomClient + " - " + outMessage + ")");
     }
     
     public String recevoir(String inMessage)
